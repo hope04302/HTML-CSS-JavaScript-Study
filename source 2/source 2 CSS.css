@@ -1,0 +1,234 @@
+#out {
+    color:red;
+}
+
+#a {
+    /*
+
+    font-family: font1, font2, ...;
+    (폰트 설정)
+
+    color:
+    red | blue | ... (설정된 색깔)
+    #0000ff; (RGB)
+
+    font-style: italic | ...;
+
+    font-weight:
+    normal | bold |...
+    100 ~ 900;
+
+    font-size: 24px(default: 16px)
+
+    text-transform: capitalize | lowercase; | ...;
+
+    text-align: center;
+
+    */
+    font-family: 맑은 고딕;
+    color: #492839;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 24px;
+    text-align: right;
+}
+
+#b {
+    /*
+    
+    font-size: ...px, ...%, ...em
+    %, em: 상대적 크기(ex. 본래 크기의 두배)
+
+    em은 tag가 부모-자식을 많이 형성할 때 겹겹히 적용
+    %는 덮어쓰기 가능
+
+    */
+    font-size: 24px;
+}
+
+* {
+    /*
+    
+    브라우저 기본 세팅
+    방해 안될려면 기본적으로 margin, padding: 0px로!
+    box-sizing도 설정
+    ** body 안에 설정하면 기본 설정이 그대로 유지됨
+
+    */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#c {
+    /*
+    
+    The Box Model
+    특정 "content"는 margin-border-padding-content로 쌓임.
+    
+                외각 <-----------------------------> 내부
+    
+    box: weight(가로) * height(세로)
+
+    <각종 설정들>
+
+    background-color: ...;
+
+    padding: t -> r -> b -> l 순서(다 같다면 하나만)
+    (ex. padding 10px 10px 10px 10px; -> padding 10px;)
+
+    broder: px(%) -> solid | dotted | ...(실선? 점선?) -> color
+   
+    margin: padding과 동일
+
+    box-sizing: border-box | content-box, ...
+    (width는 content-box 기준으로 하나, 이는 전체 박스 크기와 괴리가 있음.
+    따라서 보통 border-box로 기준 바꿈)
+    ** box-sizing은 상속 불가함. -> '*'을 활용(모든 요소 '선택'(상속X))!
+
+    <주의>
+    좌우로 margin이 붙을 땐 margin이 누적되지만.
+    상하로 margin이 붙을 땐 더 우세한 쪽이 나머지를 무력화함.
+
+    <주의>
+    만약 width가 작음에도 height가 너무 작음 -> 아래로 내용 튀어나옴(overflow)
+    -> overflow: visible | hidden | auto(스크롤바) | scroll(필요 없어도 스크롤바 만듦);
+
+    */
+
+    background-color: orange;
+    padding: 5px 10px 15px 20px;
+    border: 5px solid red;
+    margin: 10px 20px 30px 40px;
+    width: 500px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+#d {
+    /*
+
+    배경 설정
+
+    background-color: ...;
+
+    background-image: url("...");
+    * color < image
+
+    background-repeat: repeat | repeat-x | no-repeat | ...;
+
+    background-position: bottom | top, right | left;
+    */
+
+    background-color: red;
+    background-image: url("HTML5_logo_and_wordmark.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    /*
+    
+    background: ...(전부); 도 가능
+    단, 이땐 안 적은 속성은 전부 무시(색깔은 확실)
+
+    */
+
+}
+
+/*
+
+floating으로 positioning하기
+
+float: right | left | bottom | top;
+(요소를 움직이면, 일반 문서 플로우에서 제외됨
+floated element는 마진이 무시되지 않음)
+
+clear: right | left | bottom | top | both;
+(특정 방향에 floating 요소가 없도록 이동시킴)
+
+position: relative;
+t | b | r | l : ...px -> (해당 위치)에서 (반대로) 이동!
+ex) top: 50px -> 위쪽에서 "아래쪽으로" 이동
+** -값도 사용 가능(-100px etc.)
+** 문서상 기본 위치는 변하지 않음(floationg 되지 않고 계속 flow)
+** tag 안의 모든 내용(contents)들을 함께 이동
+
+position: absolute;
+t | b | r | l : ...px -> 비슷하게 이동
+ex) top: 50px -> "위로" 50px 이동
+** -값도 사용 가능
+** 문서상 flow에서 벗어남.
+** 부모에 상대적 포지션이 있어야 함.
+(참고로 html tag만 default가 상대적 포지션임.)
+
+*/
+
+#ea {
+    float: right;
+    background-color: pink;
+    width: 150px;
+    height: 150px;
+}
+
+#eb {
+    clear: right;
+    float: right;
+    background-color: green;
+    width: 150px;
+    height: 150px;
+}
+
+#ec {
+    
+    clear: right;
+    float: right;
+    background-color: red;
+    width: 150px;
+    height: 150px;
+}
+
+#ed {
+    position: relative;
+    bottom: -30px;
+    right: -50px;
+    background-color: yellow;
+    width: 150px;
+    height: 150px;
+}
+
+#ee {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background-color: purple;
+    width: 150px;
+    height: 150px;
+}
+
+@media (max-width: 767px) {
+    /*
+    
+    Media Query
+
+    만약 위 괄호 속이 true라면, 속의 것들을 적용한다.
+
+    예시:
+
+    @media (max-width: 800px) {...} // 애용
+    @media (min-width: 800px) {...} // 애용
+    @media (orientation: portrait) {...}
+    @media screen {...}
+    @media print {...}
+
+    and, ',' 등으로 결합 가능.
+    ex. @media (min-width: 768px) and (max-width: 991px) {...}
+    
+    경계 설정시 잘하기(ex. min=800...max=1999, min=2000, ...)
+    경계 겹칠 시 골차아파짐.
+    
+    1200... & 992...1199
+
+    */
+    p {
+        color: blue
+    }
+}
