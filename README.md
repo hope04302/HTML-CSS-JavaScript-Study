@@ -1,4 +1,4 @@
-# HTML_CSS_and_JavaScript
+# HTML, CSS, and JavaScript
 
 HTML, CSS, JavaScript를 활용한 웹 개발 공부(2023.01.)
 
