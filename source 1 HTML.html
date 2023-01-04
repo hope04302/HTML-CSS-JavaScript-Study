@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML 강좌</title>
+    </head>
+    <body>
+        <header>
+            
+            <a href="#section1">#Section1</a>
+            <h2>header tag</h2>
+            <!--
+                전체적인 문서의 구성:
+                이하 모든 tag는 "블록 요소"
+                header
+                main(강좌에선 언급 안함)
+                    - section
+                    - article
+                footer
+                aside
+                *** nav tag ***
+                    말그대로 웹사이트에서 우리를 찾는 네비 역할
+            -->
+            <nav>NAV TAG</nav>
+        </header>
+        <h1>HTML 강좌</h1>
+        <hr>
+        <div>
+            <h2>div, span tags</h2>
+            <!--
+                div & span tag의 차이:
+                div: 블록 요소
+                span: 인라인 요소
+                *** 인라인 안에 블록 요소는 들어가면 안됨!
+                ex)
+                    <span>...<div>...</div>...</span>
+                    (잘못된 예)
+            -->
+            <div>DIV ELEMENT</div>
+            <span>SPAN ELEMENT</span>
+            <span>SPAN ELEMENT 2</span>
+        </div>
+        <hr>
+        <div>
+            <h2>p, id(class)</h2>
+            <!--
+                p tag:
+                paragraph
+
+                id -> 고유의 것(전체서 한 개만 가짐)
+                class -> X
+            -->
+        </div>
+        <hr>
+        <div>
+            <h2>h<i>n</i> tags</h2>
+            <!--
+                hn tags:
+                중요한 부분에 쓰임
+                h1 ~ h6까지
+                *주의* 인코딩엔 큰 영향 없을수도
+            -->
+            <h1>H1 ELEMENT</h1>
+            <h2>H2 ELEMENT</h2>
+            <h3>H3 ELEMENT</h3>
+            <h4>H4 ELEMENT</h4>
+            <h5>H5 ELEMENT</h5>
+            <H6>H6 ELEMENT</H6>
+            <H6>h7, h8, ... is NONE</H6>
+        </div>
+        <hr>
+        <div>
+            <h2>lists</h2>
+            <h3>나열 리스트(ul-li)</h3>
+            <!--
+                ul & li tags:
+                사용꼴:
+                <ul>
+                    <li>...</li>
+                </ul>
+                참고:
+                ul 안에는 li만...
+                일반 텍스트도 안됨!
+            -->
+            <ul>
+                <li>hiragana</li>
+                <li>katakana</li>
+                <li>kanji</li>
+            </ul>
+            <h3>순서 리스트(ol-li)</h3>
+            <!--
+                ol & li tags:
+                사용꼴:
+                <ol>
+                    <li>...</li>
+                </ol>
+                참고:
+                ol 안에는 li만...
+                일반 텍스트도 안됨!
+            -->
+            <ol>
+                <li>cookie</li>
+                <li>jelly</li>
+                <li>bisket</li>
+            </ol>
+        </div>
+        <hr>
+        <div>
+            <h2>특수 문자 사용</h2>
+            <!--
+                '<' -> &lt;
+                '>' -> %gt;
+                '&' -> &amp;
+                (저작권 표시) -> &copy;
+                (줄바꿈 없는 공백) -> &nbsp;
+
+                이메일 클라이언트는 더욱 제한적인 set을 갖는다.
+                '"' -> &quot;
+
+                ** 세미콜론까지
+                ** &nbsp;를 span과 구분해 쓸 것.
+            -->
+            <p>
+                &lt;
+                &gt;
+                &amp;
+                &copy;
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&nbsp;aaaa
+                aa aa a aaaaaaaaaaaa aaaaaaaa&nbsp;aaaaaaa
+                &quot;
+            </p>
+        </div>
+        <hr>
+        <div>
+            <h2>a tag</h2>
+            <!--
+                a tag:
+                링크 연결할 때 쓰임
+
+                속성: href, title
+                href: 연결될 링크
+                title: 주제, 링크의 내용 등
+                target: _blank(새 탭에서 열림)
+                <a>...</a>: 랑크될 텍스트
+
+                href에서 #... 쓸 시
+                1. 해당 id 가진 위치로 이동시킴
+                2. a의 name 속성을 활용하면 id와 비슷한 효과
+
+                ** a tag는 블록, 인라인 요소 모두에 해당!
+            -->
+            <a id="section1" href="https://github.com/hope04302" title="github" target="_blank">
+                <div>My Github</div>
+            </a>            
+        </div>
+        <hr>
+        <div>
+            <h2>img tag</h2>
+            <!--
+                img tag:
+                이미지 삽입
+                <인라인 요소>
+
+                src: 경로(url)
+                width & height: 크기(a, apx -> px, a% -> 전체 화면에 대한 백분율)
+                ** 하나 맞추면 나머지는 자동으로 맞춰지나, 둘다 맞추기를 권장
+                alt: 대체 텍스트
+            -->
+            <img src="HTML5_logo_and_wordmark.svg" width="100%" alt="html"> 
+        </div>
+        <hr>
+        <footer>
+            기타 궁금한 점: 010-****-****
+        </footer>
+    </body>
+</html>

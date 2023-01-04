@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF_8">
+        <title>CSS 강좌</title>
+        <!--
+            이미 모바일에 맞춰 설계했으니 줌 아웃 하지 마라!
+            -> 아래 내용 삽입
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"
+        <!--
+            CSS 적용 3: 다른 파일에 CSS 사용
+            <link rel="stylesheet" href="파일">
+        -->
+        <link rel="stylesheet" href="source 2 CSS.css"> 
+    </head>
+    <!--
+        CSS 적용 1: <style>...</style> 사용
+    -->
+    <style>
+        /*
+        . -> class
+        # -> id
+        
+        A, B = A || B
+        AB = A && B
+        A.B = A with class B
+        A > B = A의 바로 아래 자손인 B
+        A B = A의 자손 B
+
+        */
+        #in {
+            color: blue;
+            font-size: 20px;
+            width: 200px;
+        }
+        /*
+        pseudo-class selectors
+        link: 방문하지 않은 링크
+        visited: 방문한 링크
+        hover: 사용자가 요소 위를 지나감
+        active: 요소를 클릭했으나, 떼지는 않음
+        nth-child(숫자|odd|even): 한 태크 안 수많은 li, div등에 쓰여 해당 3번째 요소
+        */
+        header ul li {
+            list-style: none;
+        }
+
+        a:link, a:visited {
+            color: black;
+            text-decoration: none;
+            display: block;
+            width: 200px;
+            text-align: center;
+            background-color: yellow;
+        }
+        
+        a:hover, a:active {
+            color: red;
+        }
+
+        li:nth-child(3) {
+            font-size: 100px;
+        }
+
+    </style>
+    <body>
+        <header>
+            <ul>
+                <li><a href="https://www.google.com/search?q=name+id+%EC%B0%A8%EC%9D%B4&ei=alO1Y4WDJYuC2roPvouliA0&ved=0ahUKEwiF4NWA2a38AhULgVYBHb5FCdEQ4dUDCA8&uact=5&oq=name+id+%EC%B0%A8%EC%9D%B4&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQgAQyBggAEAUQHjIGCAAQBRAeMgYIABAFEB4yCQgAEAUQHhDxBDIGCAAQBRAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB46CwguEIAEEMcBENEDOgQIABBDOgoILhDHARDRAxBDOgsILhCABBDHARCvAToNCC4QxwEQ0QMQQxDqBDoHCAAQgAQQCjoKCC4QgAQQ1AIQCjoHCC4QgAQQCjoECAAQHkoECEEYAEoECEYYAFAAWNEXYJMZaANwAXgBgAGQAogByxCSAQYwLjEzLjGYAQCgAQHAAQE&sclient=gws-wiz-serp">A1</a></li>
+                <li><a href="#">A2</a></li>
+                <li><a href="#">A3</a></li>
+            </ul>
+        </header>
+        <h1>CSS 강좌</h1>
+        <p id="in">내부 &lt;style&gt;활용</p>
+        <p id="out">외부 스타일 시트 활용...!</h2>
+        <!--
+            (인라인 스타일링)
+            CSS 적용 2: tag 안에 style="...: ...;"
+        -->
+        <p style="color: green;">이렇게 CSS 쓸수도...!</p>
+        <p id="a">C언어</p>
+        <p id="b">C++</p>
+        <p id="c">Java, Javascript, etc are best language.</p>
+        <p id="d">Python</p>
+        <br>
+        <p id="e">
+            <div id="ea">Knee-Capping; (출처: 나무위키)</div>
+            <div id="eb">a</div>
+            <div id="ec">b</div>
+            <div id="ed">
+                c<div id="ee">d</div>
+            </div>
+        </p>
+    </body>
+</html>
