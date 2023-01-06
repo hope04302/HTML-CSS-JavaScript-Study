@@ -1,0 +1,95 @@
+#header-nav {
+  background-color: #dadada;
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Oxygen', serif;
+  color: #000000;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+.navbar-brand p { /* Kosher cert */
+  color: #000;
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 15px;
+}
+.navbar-brand p span { /* Star-K */
+  vertical-align: middle;
+}
+
+#nav-list {
+  margin-top: 10px;
+  background: white;
+}
+
+#nav-list a {
+  color: #000000;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #c0c0c0;
+}
+#nav-list a span {
+  font-size: 1.3em;
+}
+
+.navbar-header button.navbar-toggle {
+  border: 2px solid #000000;
+}
+
+.navbar-header .icon-bar {
+  border: 2px solid #000000;
+}
+
+.navbar-header button.navbar-toggle:hover .icon-bar{
+  border: 2px solid #ffffff;
+}
+
+.navbar-header button.navbar-toggle:hover{
+  border: 2px solid #ffffff;
+}
+
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -45px;
+}
+
+/* 본문 */
+
+#Chicken, #Beef, #Sushi {
+  background-color: #dadada;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+}
+
+#Chicken h1, #Beef h1, #Sushi h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+#title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+main a {
+  font-style: italic;
+}
