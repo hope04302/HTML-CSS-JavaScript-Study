@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF_8">
+        <title>JS 공부 2</title>
+    </head>
+    <body>
+        <h1 id="title">Lectures</h1>
+        <p>
+            Say hello to<br>
+
+            <!--
+                input attribute:
+                onblur="sayHello();" -> 클릭 없이 작동
+                (focus를 읽을 때 작동)
+            -->
+            <input id="name" type="text">
+            <button onclick="sayHello();">
+                Say it!
+            </button>
+            <br>
+            <input id="name2" type="text">
+            <button id="button">
+                Say it!
+            </button>
+        </p>
+
+        <div id="content"></div>
+        <div id="content2"></div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
