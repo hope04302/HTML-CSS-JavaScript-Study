@@ -24,6 +24,12 @@
 
     text-align: center;
 
+    text-decoration(-line, -color, -style, -thickness):
+    -line: 밑줄(underline), 윗줄(overline), 취소선(line-through), none
+    -color:
+    -style: dotted, solid, double, dashed, wavy
+    -thickness: 굵기
+
     */
     font-family: 맑은 고딕;
     color: #492839;
