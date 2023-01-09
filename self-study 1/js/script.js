@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .addEventListener("click", function (event) {
         var title = document.querySelector("#search input").value;
         document.querySelector("#search input").value = "";
-        document.querySelector("main").innerHTML += title + "<br>";
+        document.querySelector("main").innerHTML += "<h1>" + title + "<h1>" + "<br>";
     });
 
     (function (global) {

@@ -51,3 +51,12 @@
     font-weight: 600;  
     margin-left: 40px;
 }
+
+/* end header */
+
+main h1 {
+    font-size: 20pt;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 0px;
+}
